@@ -1,0 +1,35 @@
+﻿<Window x:Class="Puissance4.window.CreeUnCompteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Puissance4.window"
+        mc:Ignorable="d"
+        Title="Puissance4 - Créer un Compte"
+		Height="600"
+		Width="450"
+		WindowStartupLocation="CenterScreen"
+		ResizeMode="NoResize"
+		Background="#3366ff"
+		>
+	<Grid>
+		<Label Content="Créer un Compte:" Margin="0,15,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Unispace" FontSize="36"/>
+		<Label Content="Nom: " Margin="10,88,0,0" FontSize="20" FontFamily="Unispace" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="170"/>
+		<Label Content="Prenom: " Margin="10,133,0,0" FontSize="20" FontFamily="Unispace" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" RenderTransformOrigin="0.509,1.481" Width="170"/>
+		<Label Content="Mot de passe: " Margin="10,178,0,0" FontSize="20" FontFamily="Unispace" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Height="39" Width="170"/>
+
+		<TextBox x:Name="TextBoxNom" Margin="198,88,10,0"  Background="Transparent" BorderBrush="Black" BorderThickness="1" VerticalContentAlignment="Center" VerticalAlignment="Top" Height="40" FontFamily="Unispace" FontSize="18"/>
+		<TextBox x:Name="TextBoxPrenom" Margin="198,132,10,0"  Background="Transparent" BorderBrush="Black" BorderThickness="1" VerticalContentAlignment="Center" VerticalAlignment="Top" Height="40" FontFamily="Unispace" FontSize="18"/>
+		<TextBox x:Name="TextBoxMotDePasse" Margin="198,177,10,0"  Background="Transparent" BorderBrush="Black" BorderThickness="1" VerticalContentAlignment="Center" VerticalAlignment="Top" Height="40" FontFamily="Unispace" FontSize="18"/>
+
+		<Rectangle Stroke="Black" StrokeThickness="1" Margin="0,250,0,0" Width="200" Height="200" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+		<Image x:Name="ImageLogo" Margin="0,250,0,0" Width="200" Height="200" HorizontalAlignment="Center" VerticalAlignment="Top" Source="/Puissance4;component/data/images/police.png"/>
+		<Button x:Name="BouttonPrecedent" Click="BouttonPrecedent_Click" BorderBrush="Black" VerticalContentAlignment="Center" BorderThickness="1" Background="Lime" Content="&lt;" Margin="0,319,327,0" VerticalAlignment="Top" Height="44" FontFamily="Unispace" FontSize="14" HorizontalAlignment="Right" Width="45"/>
+		<Button x:Name="BouttonSuivant" Click="BouttonSuivant_Click" BorderBrush="Black" VerticalContentAlignment="Center" BorderThickness="1" Background="Lime" Content="&gt;" Margin="327,319,0,0" VerticalAlignment="Top" Height="44" FontFamily="Unispace" FontSize="14" HorizontalAlignment="Left" Width="45"/>
+
+		<Button x:Name="BouttonAnnuler" Click="BouttonAnnuler_Click" Background="Red" Content="Annuler" HorizontalAlignment="Left" FontFamily="Unispace" FontSize="20" Margin="41,490,0,41" Width="100"/>
+		<Button x:Name="BouttonOk" Click="BouttonOk_Click" Background="Green" Content="Ok" FontFamily="Unispace" FontSize="20" Margin="303,490,41,41"/>
+
+
+	</Grid>
+</Window>
