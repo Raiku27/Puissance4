@@ -31,7 +31,7 @@ namespace Puissance4.window
 			
 			nbrParties = Directory.GetFiles(((MainWindow)Owner).PathParties, "*", SearchOption.AllDirectories).Length - 1;
 
-			for(int i = 0; i < nbrParties; i++)
+			for(int i = 1; i < nbrParties; i++)
 			{
 				try
 				{
@@ -91,7 +91,7 @@ namespace Puissance4.window
 		{
 			int result = 0;
 
-			for (int i = 0; i < nbrParties; i++)
+			for (int i = 1; i < nbrParties; i++)
 			{
 				try
 				{
@@ -120,7 +120,7 @@ namespace Puissance4.window
 		{
 			int result = 0;
 
-			for (int i = 0; i < nbrParties; i++)
+			for (int i = 1; i < nbrParties; i++)
 			{
 				try
 				{
@@ -149,7 +149,7 @@ namespace Puissance4.window
 		{
 			int result = 0;
 
-			for (int i = 0; i < nbrParties; i++)
+			for (int i = 1; i < nbrParties; i++)
 			{
 				try
 				{

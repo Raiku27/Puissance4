@@ -770,7 +770,6 @@ namespace Puissance4
 		public bool TestGagner(int ligne,int colonne,int numJ)
 		{
 			int[,] tab = _partie.Tableau;
-			Console.WriteLine("L: {0} C: {1}",ligne,colonne);
 			//6 lignes 7 colonnes
 
 			//Horizontal
@@ -778,40 +777,40 @@ namespace Puissance4
 			//XOXX
 			//XXOX
 			//XXXO
-			if (colonne + 3 <= 6 && tab[ligne, colonne + 1] == numJ && tab[ligne, colonne + 2] == numJ && tab[ligne, colonne + 3] == numJ) { Console.WriteLine("1"); return true; }
-			else if (colonne - 1 >= 0 && colonne + 2 <= 6 && tab[ligne, colonne - 1] == numJ && tab[ligne, colonne + 1] == numJ && tab[ligne, colonne + 2] == numJ) { Console.WriteLine("2"); return true; }
-			else if (colonne - 2 >= 0 && colonne + 1 <= 6 && tab[ligne, colonne - 2] == numJ && tab[ligne, colonne - 1] == numJ && tab[ligne, colonne + 1] == numJ) { Console.WriteLine("3"); return true; }
-			else if (colonne - 3 >= 0 && tab[ligne, colonne - 3] == numJ && tab[ligne, colonne - 2] == numJ && tab[ligne, colonne - 1] == numJ) { Console.WriteLine("4"); return true; }
+			if (colonne + 3 <= 6 && tab[ligne, colonne + 1] == numJ && tab[ligne, colonne + 2] == numJ && tab[ligne, colonne + 3] == numJ) { return true; }
+			else if (colonne - 1 >= 0 && colonne + 2 <= 6 && tab[ligne, colonne - 1] == numJ && tab[ligne, colonne + 1] == numJ && tab[ligne, colonne + 2] == numJ) { return true; }
+			else if (colonne - 2 >= 0 && colonne + 1 <= 6 && tab[ligne, colonne - 2] == numJ && tab[ligne, colonne - 1] == numJ && tab[ligne, colonne + 1] == numJ) { return true; }
+			else if (colonne - 3 >= 0 && tab[ligne, colonne - 3] == numJ && tab[ligne, colonne - 2] == numJ && tab[ligne, colonne - 1] == numJ) {  return true; }
 
 			//Vertical
 			//OXXX
 			//XOXX
 			//XXOX
 			//XXXO
-			if(ligne + 3 <= 5 && tab[ligne + 1,colonne] == numJ && tab[ligne + 2, colonne] == numJ && tab[ligne + 3, colonne] == numJ) { Console.WriteLine("5"); return true; }
-			else if (ligne - 1 >=0 && ligne + 2 <= 5 && tab[ligne - 1, colonne] == numJ && tab[ligne + 1, colonne] == numJ && tab[ligne + 2, colonne] == numJ) { Console.WriteLine("6"); return true; }
-			else if (ligne - 2 >= 0 && ligne + 1 <= 5 && tab[ligne - 2, colonne] == numJ && tab[ligne - 1, colonne] == numJ && tab[ligne + 1, colonne] == numJ) { Console.WriteLine("7"); return true; }
-			else if (ligne - 3 >= 0 && tab[ligne - 3, colonne] == numJ && tab[ligne - 2, colonne] == numJ && tab[ligne - 1, colonne] == numJ) { Console.WriteLine("8"); return true; }
+			if(ligne + 3 <= 5 && tab[ligne + 1,colonne] == numJ && tab[ligne + 2, colonne] == numJ && tab[ligne + 3, colonne] == numJ) {  return true; }
+			else if (ligne - 1 >=0 && ligne + 2 <= 5 && tab[ligne - 1, colonne] == numJ && tab[ligne + 1, colonne] == numJ && tab[ligne + 2, colonne] == numJ) {  return true; }
+			else if (ligne - 2 >= 0 && ligne + 1 <= 5 && tab[ligne - 2, colonne] == numJ && tab[ligne - 1, colonne] == numJ && tab[ligne + 1, colonne] == numJ) { return true; }
+			else if (ligne - 3 >= 0 && tab[ligne - 3, colonne] == numJ && tab[ligne - 2, colonne] == numJ && tab[ligne - 1, colonne] == numJ) {  return true; }
 
 			//Diagonal1
 			//0    X    X    X 				
 			//   X    O    X    X
 			//      X    X    O    X
 			//         X    X    X    O
-			if(ligne + 3 <= 5 && colonne + 3 <= 6 && tab[ligne + 1,colonne + 1] == numJ && tab[ligne + 2, colonne + 2] == numJ && tab[ligne + 3, colonne + 3] == numJ) { Console.WriteLine("9"); return true; }
-			else if (ligne - 1 >= 0 && ligne + 2 <= 5 && colonne - 1 >= 0 && colonne + 2 <= 6 && tab[ligne - 1, colonne - 1] == numJ && tab[ligne + 1, colonne + 1] == numJ && tab[ligne + 2, colonne + 2] == numJ) { Console.WriteLine("10"); return true; }
-			else if (ligne - 2 >= 0 && ligne + 1 <= 5 && colonne - 2 >= 0 && colonne + 1 <= 6 && tab[ligne - 2, colonne - 2] == numJ && tab[ligne - 1, colonne - 1] == numJ && tab[ligne + 1, colonne + 1] == numJ) { Console.WriteLine("11"); return true; }
-			else if (ligne - 3 >= 0 && colonne - 3 >= 0 && tab[ligne - 3, colonne - 3] == numJ && tab[ligne - 2, colonne - 2] == numJ && tab[ligne - 1, colonne - 1] == numJ) { Console.WriteLine("12"); return true; }
+			if(ligne + 3 <= 5 && colonne + 3 <= 6 && tab[ligne + 1,colonne + 1] == numJ && tab[ligne + 2, colonne + 2] == numJ && tab[ligne + 3, colonne + 3] == numJ) { return true; }
+			else if (ligne - 1 >= 0 && ligne + 2 <= 5 && colonne - 1 >= 0 && colonne + 2 <= 6 && tab[ligne - 1, colonne - 1] == numJ && tab[ligne + 1, colonne + 1] == numJ && tab[ligne + 2, colonne + 2] == numJ) {  return true; }
+			else if (ligne - 2 >= 0 && ligne + 1 <= 5 && colonne - 2 >= 0 && colonne + 1 <= 6 && tab[ligne - 2, colonne - 2] == numJ && tab[ligne - 1, colonne - 1] == numJ && tab[ligne + 1, colonne + 1] == numJ) {  return true; }
+			else if (ligne - 3 >= 0 && colonne - 3 >= 0 && tab[ligne - 3, colonne - 3] == numJ && tab[ligne - 2, colonne - 2] == numJ && tab[ligne - 1, colonne - 1] == numJ) {  return true; }
 
 			//Diagonal2
 			//            X     X     X     0
 			//        X     X     O     X
 			//    X     O     X     X
 			//0     X     X     X
-			if (ligne - 3 >= 0 && colonne + 3 <= 6 && tab[ligne - 1, colonne + 1] == numJ && tab[ligne - 2, colonne + 2] == numJ && tab[ligne - 3, colonne + 3] == numJ) { Console.WriteLine("13"); return true; }
-			else if (ligne - 2 >= 0 && ligne + 1 <= 5 && colonne - 1 >= 0 && colonne + 2 <= 6 && tab[ligne + 1, colonne - 1] == numJ && tab[ligne - 1, colonne + 1] == numJ && tab[ligne - 2, colonne + 2] == numJ) { Console.WriteLine("14"); return true; }
-			else if (ligne - 1 >= 0 && ligne + 2 <= 5 && colonne - 2 >= 0 && colonne + 1 <= 6 && tab[ligne + 2, colonne - 2] == numJ && tab[ligne + 1, colonne + 1] == numJ && tab[ligne - 1, colonne + 1] == numJ) { Console.WriteLine("15"); return true; }
-			else if (ligne + 3 <= 5 && colonne - 3 >= 0 && tab[ligne + 3, colonne - 3] == numJ && tab[ligne + 2, colonne - 2] == numJ && tab[ligne + 1, colonne - 1] == numJ) { Console.WriteLine("16"); return true; }
+			if (ligne - 3 >= 0 && colonne + 3 <= 6 && tab[ligne - 1, colonne + 1] == numJ && tab[ligne - 2, colonne + 2] == numJ && tab[ligne - 3, colonne + 3] == numJ) {  return true; }
+			else if (ligne - 2 >= 0 && ligne + 1 <= 5 && colonne - 1 >= 0 && colonne + 2 <= 6 && tab[ligne + 1, colonne - 1] == numJ && tab[ligne - 1, colonne + 1] == numJ && tab[ligne - 2, colonne + 2] == numJ) {  return true; }
+			else if (ligne - 1 >= 0 && ligne + 2 <= 5 && colonne - 2 >= 0 && colonne + 1 <= 6 && tab[ligne + 2, colonne - 2] == numJ && tab[ligne + 1, colonne + 1] == numJ && tab[ligne - 1, colonne + 1] == numJ) {  return true; }
+			else if (ligne + 3 <= 5 && colonne - 3 >= 0 && tab[ligne + 3, colonne - 3] == numJ && tab[ligne + 2, colonne - 2] == numJ && tab[ligne + 1, colonne - 1] == numJ) { return true; }
 
 			return false;
 		}
