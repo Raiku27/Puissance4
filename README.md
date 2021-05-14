@@ -1,6 +1,7 @@
 # Puissance 4
 Ce project a été réaliser dans le cadre du cours de C# à l’Inpres (HEPL).
-Le but du projet était de recrée le jeu puissance 4 avec 2 joueurs et y incorporer quelque statistique.
+
+Développement du jeu Puissance 4 sous Windows, utilisation de C# WPF pour l’interface (MVC). Utilisation de layouts et de databinding. Utilisation de la registry et de fichier XML pour le stockage des données.
 
 <img src="Images/1.PNG" >
 
